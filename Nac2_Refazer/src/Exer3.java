@@ -24,13 +24,13 @@ public class Exer3 {
 				salario = 1200;
 				Totpeças += qtdePeças;
 				Totsalario += salario;
-			}
+			} else 
 			if ((qtdePeças > 30) & (qtdePeças < 41)) {
 				esc2++;
 				salario = 1200 + (qtdePeças * 10);
 				Totpeças += qtdePeças;
 				Totsalario += salario;
-			}
+			} else
 			if (qtdePeças >= 41) {
 				esc3++;
 				salario = 1200 + (qtdePeças * 15);

@@ -4,10 +4,10 @@ public class Exer_Tabela {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		int qtdeVend, codOrigem, desconto;
-		float preco, totVend;
-		String procedencia;
-		for (int i = 0; i < 21; i++) {
+		int qtdeVend = 0;
+		float preco = 0, totVend = 0, desconto = 0;
+		String procedencia = "";
+		for (int i = 0; i < 1; i++) {
 			do {
 				System.out.println("Digite o preço do produto: ");
 				preco = s.nextFloat();
@@ -20,18 +20,29 @@ public class Exer_Tabela {
 					if (qtdeVend <= 0) {
 						System.out.println("Quantidade vendida inválida, digite novamente: ");
 						qtdeVend = s.nextInt();
-					} else {
-						System.out.println("Digite o codigo de origem: ");
-						codOrigem = s.nextInt();
-						if ((codOrigem <= 0) & (codOrigem > 30)) {
-							System.out.println("Codigo de Origem inválido, digite novamente: ");
-							codOrigem = s.nextInt();
-						}
-					}
+					} 
+					totVend = preco * qtdeVend;
 				}
 			} while (preco <= 0);
-			
+			if (totVend <= 500.00) {
+				procedencia = "Sul, Norte e Leste"; 
+				desconto = totVend - (totVend * 5/100);  
+			} else 
+				if ((totVend > 500.00) && (totVend <= 2000.00)) {
+					procedencia = "Sul, Norte e Oeste"; 
+					desconto = totVend - (totVend * 1/10);
+				} else {
+					if (totVend > 2000.00) {
+						procedencia = "Todas as regiões"; 
+						desconto = totVend - (totVend * 2/10); 
+					}
+				} 
+			if (totVend > 10000) {
+				System.out.println("Parabéns, você ganhou um cupom no valor de R$50,00 para ser utilizada na próxima compra!");
+			}
 		}
+		System.out.println(procedencia);
+		System.out.println(desconto);
 		s.close();
 	}
 

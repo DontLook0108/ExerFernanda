@@ -10,12 +10,10 @@ public class Exer7 {
 		System.out.println("Digite 10 numeros: ");
 		for(int i = 0; i < 10; i++) {
 			vet[i] = s.nextInt(); 
-		}
-		for(int i = 0; i < 10; i++) {
 			if(vet[i] == 20) {
 				vin++;
 			}
-		} 
+		}
 		System.out.println("O numero 20 aparece "+vin+" vezes");
 		s.close();
 	}

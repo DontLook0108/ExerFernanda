@@ -9,7 +9,7 @@ public class Exer15 {
 		float media, melhor_media1 = 0, melhor_media2 = 0, melhor_media3 = 0, melhor_media4 = 0, melhor_media5 = 0;
 		int aluno1 = 0,aluno2 = 0,aluno3 = 0,aluno4 = 0,aluno5 = 0;
 		
-		for(int cont = 0; cont < 35; cont++) {
+		for(int cont = 0; cont < 10; cont++) {
 			System.out.println("Digite sua media: ");
 			media = s.nextFloat();  
 			if (media > melhor_media1) {

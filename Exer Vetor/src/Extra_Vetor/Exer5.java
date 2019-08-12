@@ -19,11 +19,11 @@ public class Exer5 {
 		num2 = s.nextInt(); 
 		
 		System.out.println("Digite o numero das matriculas dos alunos que cursam Plataforma de Mobilidade Corporativa – IOS: ");
-		for(int i = 0; i < num; i++) {
-			curso1[i] = s.nextInt(); 				
+		for(int i = 0; i <= num; i++) {
+			curso1[num] = s.nextInt(); 				
 		} 
 		System.out.println("Digite o números das matrículas dos alunos que cursam Driven Design: ");
-		for(int i = 0; i < num2; i++) {
+		for(int i = 0; i <= num2; i++) {
 			curso2[i] = s.nextInt(); 
 			
 			if(curso1[i] == curso2[i]) {
@@ -31,10 +31,7 @@ public class Exer5 {
 				repeti[i] = curso1[i];
 			}
 		} 
-		System.out.println("Matriculas repetidas:");
-		for(int i = 0; i < rep; i++) {
-			repeti[i] = s.nextInt();
-		}
+		System.out.println("Matriculas repetidas: "+rep+" repetidas");
 		s.close();
 	}
 

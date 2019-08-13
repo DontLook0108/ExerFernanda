@@ -9,29 +9,22 @@ public class Exer02 {
 		
 		Scanner s = new Scanner(System.in);
 		System.out.println("Digite os numeros da matriz: ");
-		for(int a = 0; a < m.length; a++) {
-			for(int b = 0; b < 4; b++) {
-				m[a][b] = s.nextInt();
-				if (m[a][b] > maior_num) {
-					maior_num = m[a][b];
+		for(int i = 0; i < 4; i++) {
+			for(int j = 0; j < 4; j++) {
+				m[i][j] = s.nextInt();
+				if (m[i][j] > maior_num) {
+					maior_num = m[i][j];
 				}
 			}
 		} 
-		
-		for(int a = 0; a < m.length; a++) {
-			for(int b = 0; b < 4; b++) {
-				 r[a][b] = m[a][b] * maior_num;
-			} 
-		} 
-		
-		for(int b = 0;  b < m.length; b++) {
-			String linha = "";
-			for(int a = 0; a < 4; a++) {
-				linha += r[b][a] + " "; 
-			} 
-			System.out.println(linha);
-		}
-		System.out.println(maior_num);
+		System.out.println("Matriz: ");
+		for(int i = 0; i < 4; i++) {
+			for(int j = 0; j < 4; j++) {
+				 r[i][j] = m[i][j] * maior_num;
+				 System.out.print("\t"+r[i][j]);
+			}  
+			System.out.println();
+		}  
 		s.close();
 	}
 

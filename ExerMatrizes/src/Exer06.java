@@ -32,18 +32,18 @@ public class Exer06 {
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 6; j++) {
 				if (j == 0) {
-					menor_preco[i] = m[i][j]; 
+					menor_preco[i] = m[i][j];
 					nome_loja = lojas[j];
 				} else {
-					if(m[i][j] < menor_preco[i]) {
-						menor_preco[i] = m[i][j]; 
+					if (m[i][j] < menor_preco[i]) {
+						menor_preco[i] = m[i][j];
 						nome_loja = lojas[j];
 					}
 				}
 			}
-			System.out.println(
-					"O produto " + nome[i] + " de codigo "+cod[i]+" foi encontrado na loja " + nome_loja + " por R$ " + menor_preco[i]);
-		} 
+			System.out.println("O produto " + nome[i] + " de codigo " + cod[i] + " foi encontrado na loja " + nome_loja
+					+ " por R$ " + menor_preco[i]);
+		}
 		s.close();
 	}
 }

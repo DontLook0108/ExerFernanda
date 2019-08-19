@@ -7,13 +7,13 @@ public class Exer01 {
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 6; j++) {
 				if (j % 2 != 0) {
-					m[i][j] = 1; 
+					m[i][j] = 1;
 				} else {
 					m[i][j] = 0;
-				} 
+				}
 				System.out.printf("\t" + m[i][j]);
 			}
-			System.out.println(); 
+			System.out.println();
 		}
 	}
 }
